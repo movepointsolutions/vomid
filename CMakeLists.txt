@@ -37,7 +37,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Qt5 REQUIRED COMPONENTS Widgets)
 
 include_directories (${PROJECT_BINARY_DIR} "libvomid/include")
 
@@ -45,4 +45,4 @@ include (CTest)
 enable_testing()
 add_subdirectory (libvomid)
 add_executable (vomid WIN32 ${SOURCES} ${MOC_SOURCES} ${UI_HEADERS})
-target_link_libraries (vomid PRIVATE libvomid Qt6::Widgets)
+target_link_libraries (vomid PRIVATE libvomid Qt5::Widgets)
